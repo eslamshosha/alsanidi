@@ -1390,6 +1390,9 @@ footer {
         width: 100%;
         justify-content: space-between;
     }
+    .lang-section .dropdown-content:first-of-type{
+        left: -30px !important;
+    }
     .image-grid .col-xs-12{
         margin-bottom: 10px;
     }

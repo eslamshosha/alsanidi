@@ -17,10 +17,10 @@ $(document).ready(function() {
     if ($(window).width() <= 1199) {
          $('#menu-id-om').click(function (e) {
 			e.preventDefault()
-             $(".overlay-box").fadeIn(300);
-             $("nav").addClass("reset-left");
-             $("body").addClass("overflow");
-         });
+            $(".overlay-box").fadeIn(300);
+            $("nav").addClass("reset-left");
+            $("body").addClass("overflow");
+        });
         $(".nav-head .close-btn, .overlay-box").click(function () {
         	$(".overlay-box").fadeToggle(300);
             $("nav").removeClass("reset-left");
