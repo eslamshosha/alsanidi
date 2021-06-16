@@ -1166,7 +1166,6 @@ footer {
     font-size: 24px;
     color: #138aa8;
     font-family: "TajawalMedium";
-    margin-top: -30px !important;
 }
 .about-text {
     font-size: 15px;
@@ -1491,6 +1490,9 @@ footer {
     }
     .pay-footer .pay-list .pay-li {
         margin: 0 5px;
+    }
+    .news-header{
+        margin-left: 12px !important;
     }
 }
 

@@ -11,7 +11,6 @@ $(document).ready(function() {
     });
     $('.overlay-box').click(function () {
         $(".cats-dispaly").slideToggle(400);
-        $(".overlay-box").fadeToggle(300);
     });
 	//phone size menu
     if ($(window).width() <= 1199) {
