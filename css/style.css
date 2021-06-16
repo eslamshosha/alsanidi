@@ -38,7 +38,10 @@ body {
     border: none;
 }
 /*                          header section                     */
-header{z-index: 12}
+header{
+    z-index: 12;
+    position: relative;
+}
 .top-header{
     background-color: #10758f;
     color: #fff;
@@ -83,9 +86,12 @@ header{z-index: 12}
   /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 8px 8px 4px;
     text-decoration: none;
     display: block;
+  }
+  .dropdown-content a:nth-of-type(2) {
+    padding: 4px 8px 8px;
   }
   
   /* Change color of dropdown links on hover */
@@ -115,12 +121,12 @@ header{z-index: 12}
 }
 
 .lang-section .chevron-down:hover {
-    color: #000;
+    color: #ea8f3c;
 }
 
 .lang-section .dropdown-content{
     background-color: #fff;
-    width: 100px;
+    width: 80px;
     z-index: 99999;
     box-shadow: 3px 3px 15px #00000012, -3px -3px 15px #00000012;
     text-align: center;
@@ -128,12 +134,12 @@ header{z-index: 12}
     right: -20px;
 }
 .lang-section .list-link{
-    font-size: 14px;
+    font-size: 12px;
     font-family: "TajawalRegular";
     transition: all 0.4s ease-in-out;
 }
 .lang-section .list-link:hover{
-    background-color: #10758f;
+    background-color: #ea8f3c;
     color: #fff;
 }
 
@@ -414,18 +420,8 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
     opacity: 1;
     visibility: visible;
 }
-.overlay-box {
-    background-color: black;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    display: none;
-    opacity: .5;
-}
-.overlay-box2 {
+.overlay-box,
+.overlay-box2{
     background-color: black;
     position: fixed;
     top: 0;
@@ -467,7 +463,7 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
 .nav-title {
     font-size: 17px;
     color: #fff;
-    font-family: "TajwalBold";
+    font-family: "TajawalBold";
 }
 .nav-head .close-btn {
     color: #fff;
@@ -482,7 +478,7 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
         align-items: center;
     }
     .logo{
-        max-width: 145px;
+        max-width: 228px;
     }
     .logo-img{
         width: 145px;
@@ -847,7 +843,7 @@ html[dir=rtl] .item {
 /*                           tabs section                              */
 /*                           product slider tabs                       */
 .tabs-catgory {
-    margin-bottom: 115px;
+    margin-bottom: 85px;
 }
 
 .item {
@@ -947,7 +943,8 @@ html[dir=rtl] .item {
     background-color: #fff;
     position: absolute;
     width: 100%;
-    left: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 15px;
     max-width: 220px;
     box-shadow: -1px 2px 10px 3px rgba(0,0,0,0.2);
@@ -1150,7 +1147,7 @@ input::-webkit-inner-spin-button {
 
 /*                                image-grid                           */
 .image-grid {
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 .image-grid img{width:100%}
 .image-grid a {text-decoration: none;}
@@ -1372,6 +1369,7 @@ footer {
 @media only screen and (max-width: 1200px)  {
     .second-header{
         flex-wrap: wrap;
+        padding: 10px 0;
     }
     .logo{
         order:1;
@@ -1426,6 +1424,21 @@ footer {
 }
 
 @media only screen and (max-width: 767px)  {
+    /*change container padding to 10 */
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .row {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+    .tabs-catgory {
+        margin-bottom: 35px;
+    }
+    .tabs-catgory .owl-carousel .owl-dots {
+        margin-top: 0px;
+    }    
     /*login from normal text to slide down*/
     .register-section{position: relative;}
     .register-section i {
@@ -1479,13 +1492,19 @@ footer {
     }
     
     /*footer query*/
+    footer {
+        margin-top: 0px;
+        padding-top: 42px;
+    }
     .about-us{
         margin-bottom: 25px;
         text-align: center;
     }
     .about-us .logo {
         margin: 0px auto 15px;
+        width: 228px;
     }
+    
     .about-us .logo img {
         margin: auto;
     }   

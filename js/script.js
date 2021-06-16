@@ -103,7 +103,7 @@ $(document).ready(function() {
 		responsiveClass: true,
 		responsive: {
 			0: {
-				items: 1,
+				items: 2,
 				nav: false,
 				dots: true,
 				loop: true
@@ -115,13 +115,13 @@ $(document).ready(function() {
 				loop: true
 			},
 			520: {
-				items: 3,
+				items: 2,
 				nav: false,
 				dots: true,
 				loop: true
 			},
 			720: {
-				items: 4,
+				items: 2,
 				nav: false,
 				dots: true,
 				loop: true
@@ -165,7 +165,7 @@ $(document).ready(function() {
 		responsiveClass: true,
 		responsive: {
 			0: {
-				items: 1,
+				items: 2,
 				nav: false,
 				dots: true,
 				loop: true
@@ -183,7 +183,7 @@ $(document).ready(function() {
 				loop: true
 			},
 			992: {
-				items: 3,
+				items: 2,
 				nav: false,
 				dots: true,
 				loop: true
@@ -194,7 +194,7 @@ $(document).ready(function() {
 				dots: true,
 				loop: true
 			},
-			1920: {
+			1440: {
 				items: 5,
 				nav: true,
 				dots: true,
