@@ -3,14 +3,15 @@ $(document).ready(function() {
 	//slide down menu
 	$('.btn-div').click(function () {
         $(".cats-dispaly").slideToggle(400);
-        $(".overlay-box").fadeToggle(300);
+        $(".overlay-box2").fadeToggle(300);
         if ($(window).width() <= 1199) {
-            $(".overlay-box").hide();
+            $(".overlay-box2").hide();
             $(this).toggleClass("active")
         }
     });
-    $('.overlay-box').click(function () {
+    $('.overlay-box2').click(function () {
         $(".cats-dispaly").slideToggle(400);
+		$(".overlay-box2").fadeOut(300);
     });
 	//phone size menu
     if ($(window).width() <= 1199) {

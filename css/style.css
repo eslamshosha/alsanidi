@@ -425,6 +425,17 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
     display: none;
     opacity: .5;
 }
+.overlay-box2 {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+    opacity: .5;
+}
 /*.has-level-2>.cat-anchor>i::before {
     content: ""; // trasfer plus icon to arrow
 }/*
