@@ -221,6 +221,39 @@ $(document).ready(function() {
         }
         $parentElm.find(".qty-input").val(value);
     });
+
+	/////////**to refresh page for accordin to script again**//////////
+	$(function(){
+		var width = $(window).width();
+		var screen = "";
+		if(width < 1024 && width >640){
+		 screen = "small";
+		} else if(width>1024) { screen = "big"; }
+		$(window).resize(function(){
+		location.reload();
+	   })
+	});
+	////////////** footer transfer into accordion **//////////
+
+	if ($(window).width() <= 767) {
+		$(".nav-foot-header").addClass("footer-accordion");
+		$(".nav-foot").addClass("footer-panel");
+	}
+	$('.footer-accordion').click(function () {
+		var x = $(this).siblings().prop('scrollHeight') + 12 + "px";
+		$(".footer-accordion").not(this).removeClass("active");
+		$(this).toggleClass("active");
+		if ($(this).siblings().css('max-height') == '0px') {
+			$(this).siblings().css('max-height', x);
+			$(this).siblings('.nav-foot').css('padding-top', "15px");
+		} else {
+			$(this).siblings().css('max-height', '0');
+			$(this).siblings('.nav-foot').css('padding-top', "0");
+		}
+
+		$(".footer-accordion").not(this).siblings().css('max-height', '0');
+		$(".footer-accordion").not(this).siblings('.nav-foot').css('padding-top', "0");
+	})
 });
 
 //timer setting
@@ -283,25 +316,5 @@ $(window).scroll(function () {
 	$(this).scrollTop() >= 500 ? $(".arrow-top").fadeIn(300) : $(".arrow-top").fadeOut(300);
 });
 
-////////////** footer transfer into accordion **//////////
 
-if ($(window).width() <= 767) {
-	$(".nav-foot-header").addClass("mo-accordion");
-	$(".nav-foot").addClass("mo-panel");
-}
-$('.mo-accordion').click(function () {
-	var x = $(this).siblings().prop('scrollHeight') + 12 + "px";
-	$(".mo-accordion").not(this).removeClass("active");
-	$(this).toggleClass("active");
-	if ($(this).siblings().css('max-height') == '0px') {
-		$(this).siblings().css('max-height', x);
-		$(this).siblings('.nav-foot').css('padding-top', "15px");
-	} else {
-		$(this).siblings().css('max-height', '0');
-		$(this).siblings('.nav-foot').css('padding-top', "0");
-	}
-
-	$(".mo-accordion").not(this).siblings().css('max-height', '0');
-	$(".mo-accordion").not(this).siblings('.nav-foot').css('padding-top', "0");
-})
 

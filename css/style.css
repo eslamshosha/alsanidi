@@ -1298,14 +1298,14 @@ footer {
 }
 
 /*                             footer accordion                 */
-.mo-accordion.nav-foot-header {
+.footer-accordion.nav-foot-header {
     margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.mo-accordion {
+.footer-accordion {
     cursor: pointer;
     width: 100%;
     transition: .4s;
@@ -1313,17 +1313,17 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
-.mo-panel {
+.footer-panel {
     max-height: 0;
     overflow: hidden;
     transition: all .5s ease-out;
     padding: 0 15px;
 }
-.mo-accordion.active:after {
+.footer-accordion.active:after {
     transform: rotate(180deg);
 }
 
-.mo-accordion:after {
+.footer-accordion:after {
     content: "";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
