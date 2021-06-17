@@ -1171,7 +1171,7 @@ footer {
 .about-us .logo img{
     filter: invert(33%) sepia(92%) saturate(1941%) hue-rotate(167deg) brightness(90%) contrast(86%);
     width: 100%;
-    margin-top: -28px;
+    margin-top: -10px;
 }
 .about-us h3,
 .about-us p{margin: 0; padding: 0;}
