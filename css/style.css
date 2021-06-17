@@ -38,10 +38,14 @@ body {
     border: none;
 }
 /*                          header section                     */
-header{
-    z-index: 12;
-    position: relative;
+/*to get overlay under header in big size*/
+@media (min-width: 1199px){
+    header{
+        z-index: 12;
+        position: relative;
+    }
 }
+/*to get overlay under header in big size*/
 .top-header{
     background-color: #10758f;
     color: #fff;
@@ -703,6 +707,7 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
 }
 .main-slider .owl-carousel button.owl-dot.active{
     background-color: #fff;
+    opacity: 1;
 }
 
 .main-slider .owl-carousel button.owl-dot span {
@@ -1439,6 +1444,7 @@ footer {
     .tabs-catgory .owl-carousel .owl-dots {
         margin-top: 0px;
     }    
+    
     /*login from normal text to slide down*/
     .register-section{position: relative;}
     .register-section i {
@@ -1514,6 +1520,9 @@ footer {
     }
     .news-letter {
         margin-top: 40px;
+    }
+    .news-letter h3 {
+        text-align: center;
     }
     .pay-footer {
         margin-top: 30px;
