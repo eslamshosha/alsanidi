@@ -730,14 +730,27 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
 /*                          image slider section                       */
 
 .image-section {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 .item {
     width: 100%;
     direction: ltr;
 }
-html[dir=rtl] .item {
-    direction: rtl;
+.item a{text-decoration: none;}
+.item .img-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+    font-size: 18px;
+    font-family: "TajawalRegular";
+    color: #1a1a1a;
+    padding: 42px 0 25px;
+}
+.margin-img{  
+    margin-bottom: 30px;
 }
 
 .item .item-img-box {
@@ -747,12 +760,21 @@ html[dir=rtl] .item {
 }
 
 .item-img-box .item-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
     transform: scale(1.05);
     transition: all 0.4s ease-in-out;
 }
 
 .item-img-box:hover .item-img {
     transform: scale(1);
+}
+.item .img-title{
+    transition: all 0.4s ease-in-out;
+}
+.item-img-box:hover .img-link{
+    color: #138aa8;
 }
 
 .image-section .owl-carousel .owl-nav .owl-prev,
@@ -783,6 +805,44 @@ html[dir=rtl] .item {
     top: 35%;
     left: -50px;
 }
+.image-section .owl-carousel .owl-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s ease-in-out;
+}
+
+.image-section .owl-carousel button.owl-dot {
+    background-color: #000;
+    opacity: 0.4;
+    height: 3px;
+    width: 15px;
+    border-radius: 2.5px;
+    margin: 3px;
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+}
+.image-section .owl-carousel button.owl-dot.active{
+    background-color: #138aa8;
+    opacity: 1;
+}
+
+.image-section .owl-carousel button.owl-dot span {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.image-section .owl-carousel .owl-dots .owl-dot:hover span {
+    background-color: #fff;
+}
+
+.image-section .owl-carousel .owl-dots .owl-dot.active span {
+    background-color: #fff;
+}
 
 /*                          image slider section                       */
 /*                           tabs section                              */
@@ -797,7 +857,7 @@ html[dir=rtl] .item {
     overflow-x: auto;/*scroll*/
     white-space: nowrap;/*word on 1 line*/
 }
-.nav-tabs {
+.tabs-nav {
     border-bottom: none;
     
 }
@@ -826,7 +886,7 @@ html[dir=rtl] .item {
     background-color: #f79133;
     color: #fff;
 }
-.tabs-main .nav-link.active:after {
+.tabs-main .tabs-list.active .nav-link:after {/*مثلث*/
     content: '';
     display: block;
     width: 0;
@@ -841,7 +901,7 @@ html[dir=rtl] .item {
     transition: 0.3s;
     opacity: 1;
 }
-.tabs-main .nav-link.active{
+.tabs-main .tabs-list.active .nav-link{
     background-color: #f79133;
     color: #fff;
 }

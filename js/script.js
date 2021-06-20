@@ -27,9 +27,9 @@ $(document).ready(function() {
             $("body").removeClass("overflow");
         });
 
-        $('.has-level-2>.cat-anchor>i').click(function (e) {
+        $('.has-level-2>.cat-anchor').click(function (e) {
             e.preventDefault()
-            var item = $(this).parents(".cat-anchor");
+            var item = $(this);
             $(".has-level-2>.cat-anchor").not(item).removeClass("active");
             $(item).toggleClass("active");
             if ($(item).siblings().css('display') == 'none') {
@@ -40,9 +40,9 @@ $(document).ready(function() {
             $(".has-level-2>.cat-anchor").not(item).siblings().slideUp(500);
         })
 
-        $('.has-level-3>.cat-anchor>i').click(function (e) {
+        $('.has-level-3>.cat-anchor').click(function (e) {
             e.preventDefault()
-            var item = $(this).parents(".cat-anchor");
+            var item = $(this);
             $(".has-level-3>.cat-anchor").not(item).removeClass("active");
             $(item).toggleClass("active");
             if ($(item).siblings().css('display') == 'none') {
@@ -120,14 +120,8 @@ $(document).ready(function() {
 				dots: true,
 				loop: true
 			},
-			720: {
-				items: 2,
-				nav: false,
-				dots: true,
-				loop: true
-			},
 			920: {
-				items: 5,
+				items: 2,
 				nav: false,
 				dots: true,
 				loop: true
@@ -148,12 +142,12 @@ $(document).ready(function() {
 	});
 
 	//add class active to tabs
-	$(document).ready(function() {
+	/*$(document).ready(function() {
 		$(".nav-link").click(function () {
 			$(".nav-link").removeClass("active");
 			$(this).addClass("active");   
 		});
-		});
+		});*/
 	//product slider
 	$('.tabs-catgory .owl-carousel').owlCarousel({
 		loop: true,
@@ -202,6 +196,12 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	//event bootstrap to refresh tabs to cancel intiliztion 
+	$(".tabs-main a").on("shown.bs.tab", function(e) {
+		let $owl = $(".tabs-catgory .owl-carousel");
+		$owl.trigger("refresh.owl.carousel");
+	  });
 	
 	var minVal = 1, maxVal = 100; // Set Max and Min values
     // Increase product quantity on cart page
