@@ -5,6 +5,26 @@ body {
     padding: 0;
     background-color: #f7f7fa;
 }
+/*style scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #138aa8; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #10758f; 
+  }
 @font-face {
     font-family: TajawalRegular;
     src: url(../webfonts/Tajawal-Regular.ttf);
@@ -378,7 +398,7 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
 }
 .has-level-2>.cat-anchor>i {
     margin-left: auto;
-    font-size: 14px;
+    font-size: 10px;
 }
 .sub-list {
     position: absolute;
@@ -410,7 +430,7 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
 }
 .has-level-3>.cat-anchor>i {
     margin-left: auto;
-    font-size: 14px;
+    font-size: 10px;
 }
 @media (min-width: 992px){
     .has-level-2>.cat-anchor>i::before {
@@ -747,34 +767,47 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
     font-size: 18px;
     font-family: "TajawalRegular";
     color: #1a1a1a;
-    padding: 42px 0 25px;
+    position: relative;
+    padding-bottom: 100%;
 }
 .margin-img{  
     margin-bottom: 30px;
 }
 
-.item .item-img-box {
+.item .symbols-box {
     width: 100%;
     overflow: hidden;
     margin-bottom: 30px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 18px;
+    font-family: "TajawalRegular";
+    color: #1a1a1a;
+    padding: 0px 0 25px;
 }
 
-.item-img-box .item-img {
+.symbols-box .item-img {
     display: block;
     max-width: 100%;
     height: auto;
-    transform: scale(1.05);
+    top: 50%;
+    transform: scale(1.05) translateY(-50%) !important;
     transition: all 0.4s ease-in-out;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
 }
 
 .item-img-box:hover .item-img {
-    transform: scale(1);
+    transform: scale(1) translateY(-50%);
 }
 .item .img-title{
     transition: all 0.4s ease-in-out;
 }
-.item-img-box:hover .img-link{
+.symbols-box:hover .cat-name{
     color: #138aa8;
+    cursor: pointer;
 }
 
 .image-section .owl-carousel .owl-nav .owl-prev,
@@ -1599,5 +1632,11 @@ footer {
 @media only screen and (min-width: 1500px)  {
     .container{
         width: 1440px;
+    }
+}
+@media only screen and (min-width: 1300px){
+    .item .item-img-box .left-text,
+    .item .item-img-box .right-text{
+        padding: 6px 8px;
     }
 }
