@@ -797,12 +797,12 @@ html[dir="ltr"] .phone-link i{transform: scaleX(-1);} /*lft rtl remove*/
 
 .image-section .owl-carousel .owl-nav .owl-prev {
     position: absolute;
-    top: 35%;
+    top: 45%;
     right: -50px;
 }
 .image-section .owl-carousel .owl-nav .owl-next {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: -50px;
 }
 .image-section .owl-carousel .owl-dots {
@@ -1056,12 +1056,12 @@ html[dir=rtl] .item {
 
 .tabs-catgory .owl-carousel .owl-nav .owl-prev {
     position: absolute;
-    top: 35%;
+    top: 45%;
     right: -50px;
 }
 .tabs-catgory .owl-carousel .owl-nav .owl-next {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: -50px;
 }
 .tabs-catgory .owl-carousel .owl-dots {
